@@ -1,0 +1,149 @@
+================================================================
+        STUDENT MANAGEMENT SYSTEM - PROJECT DETAILS
+================================================================
+
+PROJECT NAME   : Student Management System
+LANGUAGE       : Java
+TYPE           : Console Application
+VERSION        : 1.0
+LINES OF CODE  : 700+
+TOTAL CLASSES  : 8
+
+----------------------------------------------------------------
+DESCRIPTION
+----------------------------------------------------------------
+
+Student records-a manage panna Java-la build panna console app.
+Add, View, Search, Update, Delete ellam support pannudu.
+GPA automatic-a calculate aagum. Colour-coded terminal output.
+
+----------------------------------------------------------------
+FEATURES
+----------------------------------------------------------------
+
+1. Student CRUD
+   - Add new student (name, email, phone, course, year)
+   - View all students
+   - Update student info
+   - Delete student
+
+2. GPA Engine
+   - Subject score podalam (0-100)
+   - Automatic-a letter grade calculate aagum (A, B+, C...)
+   - Weighted GPA 4.0 scale-la calculate aagum
+   - Credit hours based calculation
+
+3. Search & Filter
+   - Search by ID
+   - Search by name (partial match)
+   - Search by email
+   - Filter by course, year, status
+
+4. Status Management
+   - ACTIVE
+   - INACTIVE
+   - GRADUATED
+   - SUSPENDED
+
+5. Statistics Report
+   - Total student count
+   - Average GPA
+   - Count by course
+   - Top 10 students list
+
+6. Input Validation
+   - Email format check
+   - Phone number format check
+   - Year range check (1-6)
+   - Duplicate email check
+
+----------------------------------------------------------------
+PROJECT STRUCTURE
+----------------------------------------------------------------
+
+StudentManagementSystem/
+|
+|-- src/main/java/com/sms/
+|   |
+|   |-- Main.java                  (Entry point)
+|   |
+|   |-- model/
+|   |   |-- Student.java           (Student entity)
+|   |   |-- Grade.java             (Grade entity)
+|   |
+|   |-- repository/
+|   |   |-- StudentRepository.java (Data storage)
+|   |
+|   |-- service/
+|   |   |-- StudentService.java    (Business logic)
+|   |
+|   |-- ui/
+|   |   |-- ConsoleUI.java         (Terminal interface)
+|   |
+|   |-- util/
+|       |-- Validator.java         (Email/phone validation)
+|       |-- DataSeeder.java        (Sample data loader)
+
+----------------------------------------------------------------
+TECH STACK
+----------------------------------------------------------------
+
+- Java 21
+- OOP (Object Oriented Programming)
+- Java Streams API
+- Collections Framework (HashMap, List)
+- Regex Validation
+- ANSI Terminal Colours
+- No external libraries used
+
+----------------------------------------------------------------
+HOW TO RUN
+----------------------------------------------------------------
+
+Step 1: Extract the zip file
+
+Step 2: Open terminal in the extracted folder
+
+Step 3: Compile
+         mkdir out
+         javac -d out $(find src -name "*.java")
+
+Step 4: Run
+         java -cp out com.sms.Main
+
+Note: Java 17 or above required
+
+----------------------------------------------------------------
+SAMPLE DATA (Pre-loaded)
+----------------------------------------------------------------
+
+ID       Name              Course              Year   GPA
+-------- ----------------- ------------------- ----   ----
+STU1001  Alice Johnson     Computer Science    3      3.68
+STU1002  Bob Martinez      Engineering         4      2.81
+STU1003  Clara Nguyen      Business            2      3.90
+STU1004  David Kim         Computer Science    3      1.90
+STU1005  Eva Patel         Medicine            5      4.00
+STU1006  Frank Osei        Arts                1      0.00
+
+----------------------------------------------------------------
+GPA GRADING SCALE
+----------------------------------------------------------------
+
+Score       Letter Grade    GPA Points
+----------  ------------    ----------
+93 - 100    A               4.0
+90 - 92     A-              3.7
+87 - 89     B+              3.3
+83 - 86     B               3.0
+80 - 82     B-              2.7
+77 - 79     C+              2.3
+73 - 76     C               2.0
+70 - 72     C-              1.7
+67 - 69     D+              1.3
+60 - 66     D               1.0
+Below 60    F               0.0
+
+================================================================
+                        END OF FILE
+================================================================
